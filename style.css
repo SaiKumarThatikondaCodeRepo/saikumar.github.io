@@ -40,3 +40,20 @@ footer {
     padding: 15px;
     background: #e5e7eb;
 }
+.hero {
+    background: #1f2937;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 12px;
+}
+
+
