@@ -147,5 +147,30 @@ body {
     width: 200px;
     height: 200px;
   }
+  /* ABOUT SECTION */
+.about {
+  background: #050b14;
+  padding: 100px 20px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  color: #6aa9ff;
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 20px;
+}
+
 }
 
