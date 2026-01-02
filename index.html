@@ -495,33 +495,160 @@
         </div>
       </a>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-4 h-title">Get In Touch</h2>
-    <p class="text-gray-400 mb-6">Feel free to reach out for roles or collaborations.</p>
+<!-- CONTACT (with wallpaper) -->
+<section
+  id="contact"
+  class="relative py-20 bg-cover bg-center bg-no-repeat md:bg-fixed"
+  style="background-image:url('./assets/footer.jpg')"
+>
+  <!-- dark overlay -->
+  <div class="absolute inset-0 bg-black/70"></div>
 
-    <p>Email: <a href="mailto:thatikondasaikumar12@gmail.com">thatikondasaikumar12@gmail.com</a></p>
-  </div>
-</section>
+  <!-- content wrapper (keeps content above overlay) -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div data-aos="fade-up" class="text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+      <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+      <p class="text-gray-400 max-w-3xl mx-auto">Feel free to reach out for roles, collaborations or questions.</p>
+    </div>
 
-<!-- SCRIPTS -->
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- LEFT: contact info -->
+      <div data-aos="fade-right">
+        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="bg-primary/10 p-3 rounded-full mr-4">
+              <i data-feather="mail" class="text-primary w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-white">Email</h4>
+              <p class="text-gray-400">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=thatikondasaikumar12@gmail.com&su=Hello%20Yukta&body=Hi%20Yukta%2C%0A%0A"
+                   target="_blank" rel="noopener" class="hover:underline">thatikondasaikumar12@gmail.com</a>
+              </p>
+            </div>
+          </div>
 
-<script>
-  feather.replace();
-  AOS.init({ once: true });
+          <div class="flex items-start">
+            <div class="bg-primary/10 p-3 rounded-full mr-4">
+              <i data-feather="map-pin" class="text-primary w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-white">Location</h4>
+              <p class="text-gray-400">Australia</p>
+            </div>
+          </div>
 
-  const text = "I turn data into decisions using Python, SQL, Power BI, and Machine Learning.";
-  const el = document.getElementById("typed-text");
-  let i = 0;
-  (function type() {
-    if (i < text.length) {
-      el.textContent += text.charAt(i++);
-      setTimeout(type, 35);
-    }
-  })();
+          <div class="flex items-start">
+            <div class="bg-primary/10 p-3 rounded-full mr-4">
+              <i data-feather="phone" class="text-primary w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-white">Phone</h4>
+              <p class="text-gray-400"><a href="tel:+61432395521" class="hover:underline">+61447406113</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex space-x-4">
+          <a href="https://github.com/thatikondasaikumar" target="_blank" rel="noopener"
+             class="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition duration-300">
+            <i data-feather="github" class="text-gray-300 w-5 h-5"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sai-kumar-thatikonda" target="_blank" rel="noopener"
+             class="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition duration-300">
+            <i data-feather="linkedin" class="text-gray-300 w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: form -->
+<div data-aos="fade-left">
+  <form action="https://formspree.io/f/xgvnvbbe" method="POST"
+        class="bg-dark p-8 rounded-xl border border-gray-800">
+
+    <!-- helpers -->
+    <input type="hidden" name="_subject" value="Portfolio contact from Yukta">
+    <!-- input type="hidden" name="_next" value="https://chavanyukta.github.io/Yukta-Portfolio/thanks.html" -->
+    <p class="hidden"><label>Leave this field empty: <input name="_gotcha"></label></p>
+
+    <div class="mb-6">
+      <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+      <input id="name" name="name" type="text" required
+             placeholder="Your name"
+             class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white">
+    </div>
+
+    <div class="mb-6">
+      <label for="email" class="block text-gray-300 mb-2">Your Email</label>
+      <input id="email" name="email" type="email" required
+             placeholder="you@example.com"
+             class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white">
+    </div>
+
+    <div class="mb-6">
+      <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+      <input id="subject" name="subject" type="text"
+             placeholder="Project inquiry"
+             class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white">
+    </div>
+
+    <div class="mb-6">
+      <label for="message" class="block text-gray-300 mb-2">Message</label>
+      <textarea id="message" name="message" rows="5" required
+                placeholder="Hello, I would like to talk about..."
+                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white"></textarea>
+    </div>
+
+    <button type="submit"
+            class="w-full bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition">
+      Send Message
+    </button>
+  </form>
+</div>
+
+
+
+  <!-- SCRIPTS (load once, at the end) -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    // Feather icons
+    feather.replace();
+
+    // AOS animations
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-quart',
+      offset: 80,
+      once: true,
+      anchorPlacement: 'top-bottom'
+    });
+
+    // Auto-stagger children of any [data-stagger] container
+    document.querySelectorAll('[data-stagger]').forEach(container => {
+      [...container.children].forEach((el, i) => {
+        if (el.hasAttribute('data-aos')) {
+          el.setAttribute('data-aos-delay', String(i * 100));
+        }
+      });
+    });
+
+    // Typewriter effect
+    document.addEventListener('DOMContentLoaded', function () {
+      const text = "I turn data into decisions using Power BI, SQL, Python, and ML.";
+      const el = document.getElementById('typed-text');
+      const speed = 35;
+      let i = 0;
+      (function type() {
+        if (i < text.length) {
+          el.textContent += text.charAt(i++);
+          setTimeout(type, speed);
+        }
+      })();
+    });
 </script>
 
 </body>
