@@ -90,14 +90,14 @@
     <div class="hidden md:flex items-center gap-6 text-sm">
       <a href="#hero">Home</a>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
+      <a href="#skills">Skills Arsenal</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
     <a href="#contact" class="ml-4 rounded-xl bg-blue-500 hover:bg-blue-600 px-5 py-2 font-semibold text-black">
-      Hire Me
+      Available for Opportunities
     </a>
   </div>
 </nav>
@@ -147,9 +147,13 @@
 <!-- SKILLS -->
   <section id="skills" class="section" data-aos="fade-up">
   <div class="grid gap-6 px-6 [grid-template-columns:repeat(auto-fit,minmax(160px,1fr))]" data-stagger>
-    <h2 class="col-span-full text-3xl md:text-4xl font-bold mb-6 h-title ml-4 md:ml-8">
-      Skills
-    </h2>
+    <h2 class="col-span-full text-3xl md:text-4xl font-bold mb-2 h-title ml-4 md:ml-8">
+  Skills Arsenal
+</h2>
+<p class="col-span-full text-gray-400 mb-6 ml-4 md:ml-8">
+  Tools and technologies I use to engineer reliable data systems and deliver decision-ready insights.
+</p>
+
 
       <div class="skill" data-aos="fade-up">
         <i data-feather="bar-chart-2" class="w-5 h-5 text-[var(--accent)] opacity-90"></i>
@@ -396,8 +400,10 @@
     Designed and implemented an end-to-end <strong>data warehousing solution</strong> as part of my Master’s degree,
     focusing on dimensional modelling, ETL pipelines, and analytical querying to support
     <strong>decision-oriented reporting</strong>.
-    Stack: <strong>SQL</strong>, <strong>Data Warehousing Concepts</strong>,
-    <strong>ETL Design</strong>, <strong>Star Schema</strong>.
+    <li>
+      Stack: <strong>SQL</strong>, <strong>Data Warehousing Concepts</strong>,
+      <strong>ETL Design</strong>, <strong>Star Schema</strong>.
+    </li>
   </p>
 
   <ul class="mt-4 space-y-2 text-gray-300 list-disc ml-5">
@@ -426,29 +432,77 @@
 
 
         <div class="card p-6" data-aos="fade-up">
-          <h3 class="text-2xl font-semibold mb-3">Excel Specialist</h3>
-          <p class="text-gray-300 leading-relaxed">
-            Fast, maintainable Excel systems for analysis & reporting—then automate the repetitive bits:
-            <strong>Power Query</strong>, <strong>PivotTables</strong>, and <strong>VBA/macros</strong>.
-          </p>
-          <ul class="mt-4 space-y-2 text-gray-300 list-disc ml-5">
-            <li><strong>PM Tool:</strong> Multi-project tracker with Gantt/Kanban/resource view.</li>
-            <li><strong>Ops Reporting:</strong> Macro-driven clean→reconcile→publish; ~<strong>30%</strong> analyst time saved.</li>
-            <li><strong>Handover:</strong> Docs & short training for self-serve refreshes.</li>
-          </ul>
-        </div>
-      </div>
+  <h3 class="text-2xl font-semibold mb-3">
+    Data Warehousing & RAG Systems (Academic Project)
+  </h3>
+
+  <p class="text-gray-300 leading-relaxed">
+    Designed and implemented a <strong>Retrieval-Augmented Generation (RAG)</strong> system to improve
+    access to large-scale wellbeing data. Built an end-to-end, containerised analytics platform
+    combining <strong>PostgreSQL data warehousing</strong>, <strong>vector search</strong>, and
+    <strong>LLM-powered query interpretation</strong>.
+    Stack: <strong>PostgreSQL (pgvector)</strong>, <strong>Python</strong>, <strong>Docker</strong>,
+    <strong>Django</strong>, <strong>Streamlit</strong>.
+  </p>
+
+  <ul class="mt-4 space-y-2 text-gray-300 list-disc ml-5">
+    <li>
+      <strong>Data Warehouse Design:</strong> Modelled and optimised relational schemas for
+      <strong>189k+ metadata records</strong>; ensured key integrity and efficient analytical querying.
+    </li>
+    <li>
+      <strong>RAG Pipeline:</strong> Implemented embedding-based semantic search with multiple
+      architectures (Fast, Balanced, Thoughtful) achieving up to <strong>92% retrieval accuracy</strong>.
+    </li>
+    <li>
+      <strong>System Architecture:</strong> Fully Dockerised backend, frontend, and database
+      enabling reproducible deployment and parallel development.
+    </li>
+    <li>
+      <strong>Performance & Cost Analysis:</strong> Evaluated latency, accuracy, and API cost trade-offs;
+      recommended a production-ready architecture balancing speed and precision.
+    </li>
+    <li>
+      <strong>Outcome:</strong> Delivered a non-hallucinating chatbot that returns verified data
+      visualisation URLs, improving accessibility for non-technical users.
+    </li>
+  </ul>
+</div>
+
 
       <div class="card p-6 mt-6" data-aos="fade-up">
-        <h4 class="text-xl font-semibold mb-3">How I Work</h4>
-        <ol class="list-decimal ml-6 space-y-2 text-gray-300">
-          <li><strong>Clarify:</strong> align on KPIs and decision-makers.</li>
-          <li><strong>Trust the data:</strong> clean, validate, model (SQL/Power Query).</li>
-          <li><strong>Build for decisions:</strong> DAX + drilldowns + tooltips.</li>
-          <li><strong>Explain:</strong> drivers, edge cases, trends.</li>
-          <li><strong>Ship & enable:</strong> docs + walkthrough + v2 feedback.</li>
-        </ol>
-      </div>
+  <h4 class="text-xl font-semibold mb-3">How I Engineer Data Platforms for Decision-Making</h4>
+
+  <ol class="list-decimal ml-6 space-y-2 text-gray-300">
+    <li>
+      <strong>Start with the question:</strong>
+      Identify the decision, audience, and success metric.
+    </li>
+    <li>
+      <strong>Engineer reliable data:</strong>
+      Design schemas, snapshots, and pipelines that produce trustworthy datasets
+      (SQL, Python, Power Query).
+    </li>
+    <li>
+      <strong>Model for insight:</strong>
+      Apply dimensional modelling and transformations so metrics are intuitive,
+      comparable, and reproducible.
+    </li>
+    <li>
+      <strong>Surface the signal:</strong>
+      Highlight trends, drivers, and anomalies instead of raw numbers.
+    </li>
+    <li>
+      <strong>Explain the “why”:</strong>
+      Translate technical results into clear narratives with context and trade-offs.
+    </li>
+    <li>
+      <strong>Deliver & evolve:</strong>
+      Document assumptions, enable self-serve use, and iterate from feedback.
+    </li>
+  </ol>
+</div>
+
     </div>
 </section>
 
