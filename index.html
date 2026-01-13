@@ -440,15 +440,18 @@
   <!-- DASHBOARD IMAGES -->
   <div class="mt-6 grid grid-cols-1 gap-4">
     <img src="./assets/loyalty-dashboard-overview.jpg"
-         alt="Loyalty KPI Dashboard Overview"
-         class="w-full rounded-xl border border-gray-700 shadow-lg" />
+     onclick="openModal('./assets/loyalty-dashboard-overview.jpg')"
+     class="cursor-pointer w-full rounded-xl border border-gray-700 shadow-lg hover:scale-[1.02] transition" />
 
-    <img src="./assets/loyalty-dashboard-drillthrough.jpg"
-         alt="Loyalty Dashboard Drill Through Analysis"
-         class="w-full rounded-xl border border-gray-700 shadow-lg" />
-    <img src="./assets/loyalty-dashboard-Customer-drillthrough.jpg"
-       alt="Loyalty Dashboard Customer Drill Through Analysis"
-       class="w-full rounded-xl border border-gray-700 shadow-lg" />
+    <img src="./assets/loyalty-dashboard-overview.jpg"
+     onclick="openModal('./assets/loyalty-dashboard-drillthrough.jpg')"
+     class="cursor-pointer w-full rounded-xl border border-gray-700 shadow-lg hover:scale-[1.02] transition" />
+
+  
+    <img src="./assets/loyalty-dashboard-overview.jpg"
+     onclick="openModal('./assets/loyalty-dashboard-Customer-drillthrough.jpg')"
+     class="cursor-pointer w-full rounded-xl border border-gray-700 shadow-lg hover:scale-[1.02] transition" />
+
   </div>
 </div>
 
@@ -789,6 +792,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+  <script>
+  function openModal(src) {
+    document.getElementById('modalImage').src = src;
+    document.getElementById('imageModal').classList.remove('hidden');
+    document.getElementById('imageModal').classList.add('flex');
+  }
+
+  function closeModal() {
+    document.getElementById('imageModal').classList.add('hidden');
+    document.getElementById('imageModal').classList.remove('flex');
+  }
+</script>
+
+  <!-- IMAGE MODAL (Add once) -->
+<div id="imageModal"
+     class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50"
+     onclick="closeModal()">
+
+  <img id="modalImage"
+       class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl border border-gray-600" />
+</div>
+
 
 </body>
 </html>
