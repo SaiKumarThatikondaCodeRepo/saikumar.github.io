@@ -13,13 +13,14 @@
 
   <style>
     .bg-wrapper {
-  background: 
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url("./assets/bg.jpg") center / cover no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
-  color: white;
-}
+      background: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("./assets/bg.jpg") center / cover no-repeat;
+      /* 🔧 ONLY CHANGE: removed background-attachment: fixed */
+      min-height: 100vh;
+      color: white;
+    }
+
     html { scroll-behavior:smooth; }
     #hero, #about, #skills, #expertise, #experience, #projects, #education, #contact { scroll-margin-top: 90px; }
 
@@ -74,15 +75,12 @@
     }
 
     #about.section { border-top-color: transparent; }
-
-    @media (min-width: 1024px) {
-      #hero, #about { background-attachment: fixed; }
-    }
   </style>
 </head>
 
 <body>
 <div class="bg-wrapper">
+
 <!-- NAVBAR -->
 <nav class="fixed top-0 inset-x-0 nav-blur z-50 border-b border-[var(--muted)]">
   <div class="max-w-7xl mx-auto px-6 h-12 flex items-center justify-between">
@@ -105,7 +103,6 @@
 <!-- HERO -->
 <header id="hero" class="pt-28 pb-16">
   <div class="max-w-6xl mx-auto px-6 grid gap-10 md:grid-cols-2 items-center">
-
     <div class="flex justify-center md:justify-start">
       <img src="./assets/profile.jpg" alt="Sai Kumar"
            class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover ring-4 ring-indigo-500/40 shadow-2xl"/>
@@ -118,9 +115,7 @@
       </h1>
 
       <p class="mt-5 text-xl text-gray-300">
-        <span>
-          Data Analyst / Data Engineer — Turning data chaos into clear insights.
-        </span>
+        Data Analyst / Data Engineer — Turning data chaos into clear insights.
       </p>
 
       <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
@@ -720,99 +715,21 @@
 </div>
 
 
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <!-- SCRIPTS (load once, at the end) -->
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-  <script>
-    // Feather icons
-    feather.replace();
-
-    // AOS animations
-    AOS.init({
-      duration: 700,
-      easing: 'ease-out-quart',
-      offset: 80,
-      once: true,
-      anchorPlacement: 'top-bottom'
-    });
-
-    // Auto-stagger children of any [data-stagger] container
-    document.querySelectorAll('[data-stagger]').forEach(container => {
-      [...container.children].forEach((el, i) => {
-        if (el.hasAttribute('data-aos')) {
-          el.setAttribute('data-aos-delay', String(i * 100));
-        }
-      });
-    });
-
-    // Typewriter effect
-    document.addEventListener('DOMContentLoaded', function () {
-      const text = "I turn data into decisions using Power BI, SQL, Python, and ML.";
-      const el = document.getElementById('typed-text');
-      const speed = 35;
-      let i = 0;
-      (function type() {
-        if (i < text.length) {
-          el.textContent += text.charAt(i++);
-          setTimeout(type, speed);
-        }
-      })();
-    });
-</script>
-</div>
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contact-form');
-  const thankyouMessage = document.getElementById('thankyou-message');
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { Accept: 'application/json' }
-      });
-
-      if (response.ok) {
-        form.reset();
-        thankyouMessage.classList.remove('hidden');
-      } else {
-        alert('Submission failed. Please try again.');
-      }
-    } catch {
-      alert('Network error. Please try again.');
-    }
+<script>
+  feather.replace();
+  AOS.init({
+    duration: 700,
+    easing: 'ease-out-quart',
+    offset: 80,
+    once: true
   });
-});
-</script>
-  <script>
-  function openModal(src) {
-    document.getElementById('modalImage').src = src;
-    document.getElementById('imageModal').classList.remove('hidden');
-    document.getElementById('imageModal').classList.add('flex');
-  }
-
-  function closeModal() {
-    document.getElementById('imageModal').classList.add('hidden');
-    document.getElementById('imageModal').classList.remove('flex');
-  }
 </script>
 
-  <!-- IMAGE MODAL (Add once) -->
-<div id="imageModal"
-     class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50"
-     onclick="closeModal()">
-
-  <img id="modalImage"
-       class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl border border-gray-600" />
 </div>
-
-
 </body>
 </html>
+
